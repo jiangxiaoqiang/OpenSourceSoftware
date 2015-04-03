@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014/W32TeX) (preloaded format=xelatex 2014.12.23)  2 APR 2015 19:58
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014/W32TeX) (preloaded format=xelatex 2014.12.23)  3 APR 2015 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1281,7 +1281,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 File: ./Image/USBSecurityError.png Graphic file (type QTm)
  <use  "./Image/USBSecurityError.png" > [7]
-Overfull \hbox (0.38141pt too wide) in paragraph at lines 192--193
+Overfull \hbox (0.38141pt too wide) in paragraph at lines 195--196
 []\EU1/FandolSong-Regular(0)/m/n/10 由 于 \EU1/lmr/m/n/10 slackware \EU1/FandolSo
 ng-Regular(0)/m/n/10 使 用 的 是 \EU1/lmr/m/n/10 LILO \EU1/FandolSong-Regular(0)/m/
 n/10 进 行 引 导 系 统 的 启 动，|  因 此 配 置 分 辨 率 的 文 件 为\EU1/lmr/m/n/10 /ect/lilo.conf\E
@@ -1295,22 +1295,22 @@ File: ./Image/mountusbdisk.png Graphic file (type QTm)
 File: ./Image/DownloadSisDriver.jpg Graphic file (type QTm)
 
 <use  "./Image/DownloadSisDriver.jpg" > [9]
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
@@ -1333,18 +1333,15 @@ File: ./Image/aMulePortParameter.jpeg Graphic file (type QTm)
 <use  "./Image/aMulePortParameter.jpeg" >
 File: ./Image/SetDMZServer.jpeg Graphic file (type QTm)
  <use  "./Image/SetDMZServer.jpeg" >
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 424.
-
 Missing character: There is no ​ in font [lmroman10-regular]:mapping=tex-text!
 Missing character: There is no ​ in font [lmroman10-regular]:mapping=tex-text!
-[15] [16]
+
+[15]
 Missing character: There is no ​ in font [lmroman10-regular]:mapping=tex-text!
 Missing character: There is no ​ in font [lmroman10-regular]:mapping=tex-text!
 Missing character: There is no ​ in font [lmroman10-regular]:mapping=tex-text!
 File: ./Image/DelugeWindowsUI.jpg Graphic file (type QTm)
- <use  "./Image/DelugeWindowsUI.jpg" > [17] [18] [19] [20
+ <use  "./Image/DelugeWindowsUI.jpg" > [16] [17] [18] [19] [20
 
 ] [21
 
@@ -1359,7 +1356,7 @@ File: ./Image/GoldenDictWebster.jpg Graphic file (type QTm)
 File: ./Image/GoldenDictOxford.jpg Graphic file (type QTm)
 
 <use  "./Image/GoldenDictOxford.jpg" >
-Overfull \hbox (3.93684pt too wide) in paragraph at lines 605--606
+Overfull \hbox (3.93684pt too wide) in paragraph at lines 613--614
  [][] 
  []
 
@@ -1379,18 +1376,18 @@ File: ./Image/JDBCConnectionConfig.jpg Graphic file (type QTm)
 ] [33
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 678.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 678.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 686.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 686.
  (./OpenSourceSoftware.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 678.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 678.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 678.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 686.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 686.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 686.
  ) 
 Here is how much of TeX's memory you used:
- 25119 strings out of 493724
- 483418 string characters out of 6149050
- 552737 words of memory out of 5000000
- 28240 multiletter control sequences out of 15000+600000
+ 25131 strings out of 493724
+ 484064 string characters out of 6149050
+ 551737 words of memory out of 5000000
+ 28252 multiletter control sequences out of 15000+600000
  6928 words of font info for 48 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  44i,11n,71p,10387b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s

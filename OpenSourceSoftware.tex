@@ -116,6 +116,9 @@
 	\clearpage
 	\section{前言}
 	%Preamble
+	
+	记得小时候小伙伴有小吃，也会分给我一颗。潜移默化的在将来生活中也会考虑到一起生活的朋友。分享是妙不可言的，特别是有同样认知的朋友，咦，你也喜欢听这首音乐！但是对于使用的软件，或许大家并不是太留意。大家的电脑都装着360，装着QQ。我想软件也是需要分享的，一款优秀的软件让人爱不释手，臭虫不断的软件真是噩梦。在商业化时代的今天，我相信开源软件有它的价值，其实开源软件一直伴随着我们，只是我们没有意识到而已。腾讯的QQ、多数播放器（QQ影音、暴风影音....）、迅雷、大部分的浏览器、网站及数据库等。如果现在需要开发一款产品，首先想到的是找一块类似的开源实现版本，然后在原有的基础上修改，即可推向商业市场，极少有例外。热爱分享，热爱开源，同时也意识到一款优秀的软件倾注了太多的普通人甚至是业人士无法想象的时间和精力。开源没有想象中的美好，有利有弊，但是如果没有开源的贡献，现在的软件行业或许是另一番景象。	
+	
 	如今的软件都变得相当臃肿，我们真的需要那么多的功能吗？我们能够选择使用哪些功能吗？目前的软件使用到全部功能的10\%就已经非常可观了。在我的心目中，软件应该是简单、专注、小巧、干净，而不是复杂臃肿、各种功能、庞大、各种不知名的弹窗，不明所以的文件。而目前的绝大部分商业软件都是夹带商业目的，与软件需要完成的功能背道而驰。并非反对利用软件赚钱，一款优秀的软件所投入的资金和时间是无法想象的，甚至是不能简单用金钱可以衡量。但是绝大多数软件却是“强迫性”的，只有选项“是”，没有“否”的选项，内行人一看就明白，这是一个不好的现象。
 	
 	\newpage
@@ -348,23 +351,10 @@
 	
 	\clearpage
 	
-	\section{WinDirStat}
-	
-	\subsection{简介}
-	WinDirStat is a disk usage statistics viewer and cleanup tool for various versions of Microsoft Windows.
-	
-	有时我们需要查看磁盘到底哪些文件最占用空间，占用空间的比重。记得有一次我的磁盘莫名其妙的空间慢慢变少，几十个GB就慢慢的被占满，到最后才发现一个服务不停的在向磁盘里写入日志，如果有这个工具的话，发现它就易如反掌了。
-	
-	\subsection{KDirStat}
-	KDirStat is a graphical disk usage utility, very much like the Unix "du" command. In addition to that, it comes with some cleanup facilities to reclaim disk space.
-	
-	While KDirStat is a KDE program, it runs fine on every X11 desktop, i.e., it runs on Linux, BSD, and lots of other Unix-type systems (Solaris, HP-UX, AIX, ...).
-	
-	MS Windows Users please note that there are operating systems and window systems beyond those from Redmond, WA. This may come as a surprise to some people. ;-) There is a MS Windows clone called WinDirStat. Yes, that one is the clone. KDirStat is the original.
-			
-	\section{aMule}
+	\section{下载工具}	
+	\subsection{aMule}
 	aMule stands for all-platform Mule.aMule is an eMule-like client for the eD2k and Kademlia networks, supporting multiple platforms.Currently aMule (officially) supports a wide variety of platforms and operating systems, being compatible with more than 60 different hardware+OS configurations.aMule is entirely free, its sourcecode released under the GPL just like eMule, and includes no adware or spyware as is often found in proprietary P2P applications.aMule is built upon the wxWidgets (formerly wxWindows) toolkit, which enables it to support multiple platforms.
-	\subsection{为什么使用aMule}
+	\subsubsection{为什么使用aMule}
 	使用aMule主要基于以下原因：
 	\begin{itemize}
 		\item{它是开源软件}
@@ -372,16 +362,16 @@
 		\item{它很小巧}
 	\end{itemize}
 	
-	\subsection{eD2k链接}
+	\subsubsection{eD2k链接}
 
 	\paragraph{基本的 eD2k 链接}
 	ed2k://|file|<文件名称>|<文件大小>|<文件哈希值>|/一个 eD2k链接包含必要的文件描述像是名称, 大小及哈希值形成基本的格式
 	
-	\subsection{为何aMule会有HighID、LowID之分}
+	\subsubsection{为何aMule会有HighID、LowID之分}
 	
 	无论什么类型的P2P软件，MSN、QQ、BT……都无法实现两个内网用户——LowID用户之间的直接通讯。MSN、QQ等即时聊天工具都是通过服务器转发数据实现的，像MSN，所有的数据都是通过服务器转发，因此MSN上是看不到好友的IP地址的。而如果你用过早期QQ版本的话，应该知道有一种情况经常会发生，就是即使聊天的2个人都在线，所有的聊天内容后面都会跟上“(通过服务器转发)”，现在的版本只是已经去掉了这句话。然而，为传输大量数据而设计的eMule、BT等P2P软件显然无法使用“服务器转发”来实现LowID用户之间的通信——因为大量的数据转发会无端浪费极大的网络带宽，并且eMule、BT之类免费软件也无法提供要求如此之高的服务器来完成这项任务。BT之中没有LowID的说法只是因为它不提，而不是它能够解决这个问题。所以不要说因为LowID的关系而放弃eMule转用BT，那是荒诞无稽的笑话:-)
 		
-	\subsection{aMule的配置}
+	\subsubsection{aMule的配置}
 	在下载好aMule之后，启动后会提示获取了Low ID\footnote{Low ID一般都是没有公网IP的内网用户，两个Low ID用户之间是无法直接连接的，所以Low ID的用户下载源会相对少一点（无法从其它Low ID用户那里下载）。}。如何获取High ID\footnote{High ID就是拥有独立公网IP并且能提供端口(默认4662)给eMule工作的用户；此类用户可以和任何eMule兼容客户端连接与下载。}呢？只需要设置路由的转发规则和将本机设置为DMZ主机2个步骤即可\footnote{http://www.emule.org.cn/topic/lowid/}。获取HignID之后界面显示如图\ref{GetHighID}所示。
 	
 	\begin{figure}[htbp]
@@ -420,7 +410,7 @@
 		
 	\end{enumerate}
 	
-	\section{Deluge}
+	\subsection{Deluge}
 	\subsubsection{简介}
 	Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.
 	
@@ -440,7 +430,7 @@
 		\label{DelugeWindowsUI}
 	\end{figure}
 	
-	\section{Open Download Manager}
+	\subsection{Open Download Manager}
 	
 	\section{Shutter}
 	
@@ -501,6 +491,24 @@
 	Mozilla Thunderbird是由Mozilla浏览器的邮件功能部件所改造的邮件工具，使用 XUL 程序界面语言所设计，是专门为搭配 Mozilla Firefox 浏览器使用者所设计的邮件客户端软件，介面设计更简洁、而且免安装。 这款软件非常优秀，目前官方最新版本为 24.5.0，早期版本有 2.0.0.24 和 3.1.17。2.x 和 3.1.x 系列的后台资源占用很低，适合配置不高的用户；9.0.x 系列资源占用较高但数据安全性有了很大提高，功能也更加丰富。
 	
 	Thunderbird is a free email application that's easy to set up and customize - and it's loaded with great features!
+	
+	\section{其他工具}
+	
+	\subsection{WinDirStat}
+	
+	\subsubsection{简介}
+	WinDirStat is a disk usage statistics viewer and cleanup tool for various versions of Microsoft Windows.
+	
+	在用Windows操作系统时C盘经常是越用越少，有时我们需要查看磁盘到底哪些文件最占用空间，占用空间的比重，以便于有针对性的清理。记得有一次我的磁盘莫名其妙的空间慢慢变少，几十个GB就慢慢的被占满，到最后才发现是Windows服务不停的向磁盘里写入日志，如果有这个工具的话，发现它就易如反掌了。
+		
+	\subsection{KDirStat}
+	KDirStat is a graphical disk usage utility, very much like the Unix "du" command. In addition to that, it comes with some cleanup facilities to reclaim disk space.
+	
+	While KDirStat is a KDE program, it runs fine on every X11 desktop, i.e., it runs on Linux, BSD, and lots of other Unix-type systems (Solaris, HP-UX, AIX, ...).
+	
+	MS Windows Users please note that there are operating systems and window systems beyond those from Redmond, WA. This may come as a surprise to some people. ;-) There is a MS Windows clone called WinDirStat. Yes, that one is the clone. KDirStat is the original.
+		
+	
 	
 	\clearpage
 	
