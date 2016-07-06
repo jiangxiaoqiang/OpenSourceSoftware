@@ -44,3 +44,6 @@ Temporary Items
 
 #User define ignore file
 OpenSourceSoftware.log
+OpenSourceSoftware.out
+OpenSourceSoftware.aux
+OpenSourceSoftware.synctex.gz

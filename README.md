@@ -1,5 +1,4 @@
 # OpenSourceSoftware
-Initial
 
-This project is a LaTex document.The document help people know more about open source software by introducing current
-popular open source software.
+包含经常使用的一些开源软件的总结。一本自撰的开源软件的实践手册
+
