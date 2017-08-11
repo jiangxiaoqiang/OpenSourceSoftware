@@ -7,7 +7,7 @@
 \usepackage{multirow}
 \usepackage{indentfirst}
 \usepackage{titlesec}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{listings}
 \usepackage{fontspec,xunicode,xltxtra}
 \usepackage{xeCJK}
@@ -17,7 +17,7 @@
 %\usepackage[margins=50in]{geometry}
 
 %When compile under liunx% 
-\setmainfont{WenQuanYi Micro Hei}  
+%\setmainfont{WenQuanYi Micro Hei}  
 %\setmainfont{KaiTi} 
 %\setmainfont{SimSun} 
 \definecolor{orange}{RGB}{255,127,0} 
@@ -65,23 +65,59 @@
 \graphicspath{{./Image/}{./Image/FormDesign/}{./Image/InterfaceDesign/}}
 %\graphicspath{{I:\Nutstore\Document\Tex\JsptpdCSSDS\Image\Interface\_Design}}%
 
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
 %Set Code Format%
-\lstloadlanguages{C, csh, make}
-\lstset{	
-language=C
-,tabsize=4
-,keepspaces=true
-,breakindent=22pt
-,numbers=left
-,stepnumber=1
-,numberstyle=\tiny
-,basicstyle=\footnotesize
-,showspaces=false
-,flexiblecolumns=true
-,breaklines=true
-,breakautoindent=true
-,breakindent=4em
-,escapeinside={/*@}{@*/}
+\lstloadlanguages{C, csh, make,python,Java,JavaScript}
+\lstset{	  
+	alsolanguage= XML,  
+	tabsize=4, %  
+	frame=shadowbox, %把代码用带有阴影的框圈起来
+	frameround=tttt,  
+	commentstyle=\color{red!50!green!50!blue!50},%浅灰色的注释  
+	rulesepcolor=\color{red!20!green!20!blue!20},%代码块边框为淡青色  
+	keywordstyle=\color{blue!90}\bfseries, %代码关键字的颜色为蓝色，粗体  
+	showstringspaces=false,%不显示代码字符串中间的空格标记  
+	stringstyle=\ttfamily, % 代码字符串的特殊格式  
+	keepspaces=true, %  
+	breakindent=22pt, %  
+	numbers=left,%左侧显示行号 往左靠,还可以为right，或none，即不加行号  
+	stepnumber=1,%若设置为2，则显示行号为1,3,5，即stepnumber为公差,默认stepnumber=1  
+	%numberstyle=\tiny, %行号字体用小号  
+	numberstyle={\color[RGB]{0,192,192}\tiny} ,%设置行号的大小，大小有tiny,scriptsize,footnotesize,small,normalsize,large等  
+	numbersep=8pt,  %设置行号与代码的距离，默认是5pt  
+	basicstyle=\footnotesize, % 这句设置代码的大小  
+	showspaces=false, % 
+	escapechar=`,
+	flexiblecolumns=true, %  
+	breaklines=true, %对过长的代码自动换行  
+	breakautoindent=true,%  
+	breakindent=4em, %  	   
+	aboveskip=1em, %代码块边框  
+	tabsize=4,  
+	showstringspaces=false, %不显示字符串中的空格  
+	backgroundcolor=\color[RGB]{245,245,244},   %代码背景色  
+	%backgroundcolor=\color[rgb]{0.91,0.91,0.91}    %添加背景色  
+	escapeinside={``}{\_},  %在``里显示中文  
+	%% added by http://bbs.ctex.org/viewthread.php?tid=53451  
+	fontadjust,  
+	captionpos=t,  
+	framextopmargin=2pt,framexbottommargin=2pt,abovecaptionskip=-3pt,belowcaptionskip=3pt,  
+	xleftmargin=4em,xrightmargin=4em, % 设定listing左右的空白  
+	texcl=true
 }
 
 %%%% 正文开始 %%%%
@@ -795,6 +831,16 @@ qmmp is a free and open-source audio player written in C++ with the help of the 
 信奉信息自由，交流创造价值。作者很长一段时间以来，对手头的播放器颇为不满意：领先的播放器技术都是国外的，而国内的所谓播放器，不仅被插件插的一塌糊涂，还将海外的开源播放器拿回来打个包，就挂上自己的名字开始糟蹋别人的GPL。
 
 所以在2008年末，这个华人播放器开源项目在沈晟的带领下启动了，旨在为华人的使用习惯，来尽量做得最好，而且尊重和遵守开源协议。
+
+\subsection{minidlna}
+
+在树莓派上安装完毕minidlna后，启动minidlna：
+
+\begin{lstlisting}[language=Bash]
+/usr/bin/minidlnad
+\end{lstlisting}
+
+推荐用此方法启动minidlna，如果启动失败，会在终端中提示失败原因。
 
 \section{游戏}		
 \subsection{SuperTuxKart}
