@@ -17,7 +17,7 @@
 %\usepackage[margins=50in]{geometry}
 
 %When compile under liunx% 
-%\setmainfont{WenQuanYi Micro Hei}  
+\setmainfont{WenQuanYi Micro Hei}  
 %\setmainfont{KaiTi} 
 %\setmainfont{SimSun} 
 \definecolor{orange}{RGB}{255,127,0} 
@@ -692,12 +692,17 @@ Jabber 是著名的Linux即时通讯服务服务器，它是一个自由开源�
 
 \subsection{rsync}
 
-rsync is an open source utility that provides fast incremental file transfer. rsync is freely available under the GNU General Public License and is currently being maintained by Wayne Davison.在树莓派上面下载好电影后，拷贝到本机(因为树莓派的容量只有32GB)比较慢，速度只有1MB左右，所以可以借助rsync工具来实现增量拷贝，类似于断点续传的效果。
+rsync is an open source utility that provides fast incremental file transfer. rsync is freely available under the GNU General Public License and is currently being maintained by Wayne Davison.在树莓派上面下载好电影后，拷贝到本机(因为树莓派的容量只有32GB)比较慢，速度只有1MB左右，所以可以借助rsync工具来实现增量拷贝，类似于断点续传的效果。将树霉派上的文件拷贝到本机：
 
+\begin{lstlisting}[language=Bash]
+rsync -avz　--progress pi:~/share .
+\end{lstlisting}
 
+-a表示归档模式，--archive归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD。-z, --compress 对备份的文件在传输时进行压缩处理。添加progress参数，会显示同步过程中的进度信息。
 
+\subsection{samba}
 
-
+samba在树霉派上
 
 \subsection{LICEcap}
 
