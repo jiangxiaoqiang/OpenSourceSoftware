@@ -841,6 +841,38 @@ and WebHTTrack the Linux/Unix/BSD。
 
 \section{多媒体}
 
+\subsection{ffmpeg}
+
+FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。
+
+使用ffmpeg是由于比较喜欢Kygo的一首混音作品Anything for you，但是只有Youtube上面能够搜索到视频版本，所以想下载下来将音频分离出来。下载Youtube视频到网址\url{http://www.clipconverter.cc/}。获取ffmpeg源代码:
+
+\begin{lstlisting}[language=Bash]
+git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+\end{lstlisting}
+
+安装yasm:
+
+\begin{lstlisting}[language=Bash]
+sudo apt-get install yasm -y
+\end{lstlisting}
+
+安装ffmpeg:
+
+\begin{lstlisting}[language=Bash]
+./configure --enable-shared --prefix=/usr/local/ffmpeg
+sudo make
+sudo make install
+\end{lstlisting}
+
+分离音频:
+
+\begin{lstlisting}[language=Bash]
+ffmpeg -i input_file -acodec copy -vn output_file_audio　　//分离音频流
+\end{lstlisting}
+
+
+
 \subsection{VLC Media Player}	
 
 \subsubsection{简介}
