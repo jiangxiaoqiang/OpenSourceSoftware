@@ -702,7 +702,29 @@ rsync -avz　--progress pi:~/share .
 
 \subsection{samba}
 
-samba在树霉派上
+samba可共享在树霉派上下载的影片，不需要在拷贝到本机才可以播放了。输入如下命令安装samba:
+
+\begin{lstlisting}[language=Bash]
+sudo　apt-get install samba -y
+\end{lstlisting}
+
+配置samba，在/etc/samba/smb.cnf文件中:
+
+\begin{lstlisting}[language=Bash]
+[tmp]
+   path = /home/pi/share
+   valid users=pi
+   browseable=yes
+   read only = no
+   public = yes
+   writable=yes
+\end{lstlisting}
+
+启动samba:
+
+\begin{lstlisting}[language=Bash]
+sudo samba
+\end{lstlisting}
 
 \subsection{LICEcap}
 
