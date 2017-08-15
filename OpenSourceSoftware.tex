@@ -17,7 +17,7 @@
 %\usepackage[margins=50in]{geometry}
 
 %When compile under liunx% 
-\setmainfont{WenQuanYi Micro Hei}  
+%\setmainfont{WenQuanYi Micro Hei}  
 %\setmainfont{KaiTi} 
 %\setmainfont{SimSun} 
 \definecolor{orange}{RGB}{255,127,0} 
@@ -611,6 +611,35 @@ Mageia; and a portable app for Windows.
 
 GNU Wget is a free utility for non-interactive download of files from the Web. 
 It supports HTTP, HTTPS, and FTP protocols, as well as retrieval through HTTP proxies. 
+
+
+\section{transmission}
+
+Transmission全称TransmissionBittorrent，由C开发而成（Mac OS上用的是Objective-C），硬件资源消耗极少，界面极度精简。支持包括Linux、BSD、Solaris、Mac OS X等多种操作系统，以及Networked Media Tank、WD MyBook、ReadyNAS、D-Link DNS-323 \& CH3SNAS、Synology等多种设备。支持GTK+、命令行、Web等多种界面。
+
+\subsection{基本操作}
+
+
+\begin{lstlisting}[language=Bash]
+# 启动transmission-daemon
+sudo service transmission-daemon start
+\end{lstlisting}
+
+
+\subsection{配置}
+
+\paragraph{修改登陆密码}
+
+修改密码步骤如下：
+
+\begin{lstlisting}[language=Bash]
+# 停止transmission-daemon
+sudo service transmission-daemon start
+sudo vim /etc/transmission-daemon/settings.json
+\end{lstlisting}
+
+找到”rpc-password”:后面引号内就是经过加密的密码，直接把引号内的内容修改为你的新密码就可以，程序会自动生成加密串。
+
 
 \chapter{图形处理}	
 
