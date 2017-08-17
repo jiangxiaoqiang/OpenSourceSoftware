@@ -483,6 +483,14 @@ Kooboo CMS is an Enterprise Level CMS based on ASP.NET. The features includes:
 
 \subsubsection{TYPO3}
 
+
+\subsection{dolphin}
+
+\subsubsection{公开级别}
+
+默认不公开。
+
+
 \clearpage
 	
 \part{工具}
@@ -639,6 +647,21 @@ sudo vim /etc/transmission-daemon/settings.json
 \end{lstlisting}
 
 找到”rpc-password”:后面引号内就是经过加密的密码，直接把引号内的内容修改为你的新密码就可以，程序会自动生成加密串。
+
+
+\section{aria2(GNU General Public License)}
+
+aria2 is a lightweight multi-protocol \& multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.
+
+\subsection{基本使用}
+
+\begin{lstlisting}[language=Bash]
+# 安装aria2
+brew install aria2
+# 下载文件示例
+aria2c https://nchc.dl.sourceforge.net/project/projectlibre/ProjectLibre/1.7/projectlibre-1.7.dmg
+\end{lstlisting}
+
 
 
 \chapter{图形处理}	
