@@ -17,7 +17,7 @@
 %\usepackage[margins=50in]{geometry}
 
 %When compile under liunx% 
-\setmainfont{WenQuanYi Micro Hei}  
+%\setmainfont{WenQuanYi Micro Hei}  
 %\setmainfont{KaiTi} 
 %\setmainfont{SimSun} 
 \definecolor{orange}{RGB}{255,127,0} 
@@ -430,7 +430,7 @@ sudo fc-cache -fv。
 
 命令执行完，屏幕出现“fc-cache: succeeded”之后，说明字体已经安装成功了。	
 
-\begin{lstlisting}
+\begin{lstlisting}[language=tex]
 \documentclass{article}
 \usepackage{CJKutf8}
 \begin{document}
@@ -449,6 +449,18 @@ sudo fc-cache -fv。
 \end{CJK}
 \end{document}
 \end{lstlisting}	
+
+\subsection{图形处理工具inkscape}
+
+Inkscape 能够绘制用于网络或者移动电话的图形，可以是简单的线画图、漫画、复杂的艺术作品、图表或者是组织结构图。Inkscape 是一款高端的图形工具，其功能类似于 Illustrator、CorelDraw 和 Xara X。它是一款多平台软件，可以自由地在 Linux、 Microsoft Windows、Solaris 和 Mac OS X 操作系统上运行。安装：
+
+\begin{lstlisting}[language=Bash]
+# Mac OS X下安装
+brew install caskformula/caskformula/inkscape
+brew uninstall inkscape
+brew cleanup
+\end{lstlisting}
+
 
 \subsection{内容管理系统CMS}
 
@@ -631,6 +643,15 @@ Transmission全称TransmissionBittorrent，由C开发而成（Mac OS上用的是
 \begin{lstlisting}[language=Bash]
 # 启动transmission-daemon
 sudo service transmission-daemon start
+\end{lstlisting}
+
+有时需要transmission开机自动启动：
+
+\begin{lstlisting}[language=Bash]
+# 打开配置文件
+sudo vim /etc/rc.local
+# 添加启动命令
+service transmission-daemon start
 \end{lstlisting}
 
 
