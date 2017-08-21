@@ -7,7 +7,7 @@
 \usepackage{multirow}
 \usepackage{indentfirst}
 \usepackage{titlesec}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{listings}
 \usepackage{fontspec,xunicode,xltxtra}
 \usepackage{xeCJK}
@@ -17,6 +17,10 @@
 %\usepackage[margins=50in]{geometry}
 
 %When compile under liunx% 
+<<<<<<< HEAD
+=======
+%\setmainfont{WenQuanYi Micro Hei}  
+>>>>>>> 29a81fe13f573c6c8e41f8a08d7f04440c155f5f
 %\setmainfont{KaiTi} 
 %\setmainfont{SimSun} 
 \definecolor{orange}{RGB}{255,127,0} 
@@ -64,23 +68,59 @@
 \graphicspath{{./Image/}{./Image/FormDesign/}{./Image/InterfaceDesign/}}
 %\graphicspath{{I:\Nutstore\Document\Tex\JsptpdCSSDS\Image\Interface\_Design}}%
 
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
 %Set Code Format%
-\lstloadlanguages{C, csh, make}
-\lstset{	
-language=C
-,tabsize=4
-,keepspaces=true
-,breakindent=22pt
-,numbers=left
-,stepnumber=1
-,numberstyle=\tiny
-,basicstyle=\footnotesize
-,showspaces=false
-,flexiblecolumns=true
-,breaklines=true
-,breakautoindent=true
-,breakindent=4em
-,escapeinside={/*@}{@*/}
+\lstloadlanguages{C, csh, make,python,Java,JavaScript}
+\lstset{	  
+	alsolanguage= XML,  
+	tabsize=4, %  
+	frame=shadowbox, %把代码用带有阴影的框圈起来
+	frameround=tttt,  
+	commentstyle=\color{red!50!green!50!blue!50},%浅灰色的注释  
+	rulesepcolor=\color{red!20!green!20!blue!20},%代码块边框为淡青色  
+	keywordstyle=\color{blue!90}\bfseries, %代码关键字的颜色为蓝色，粗体  
+	showstringspaces=false,%不显示代码字符串中间的空格标记  
+	stringstyle=\ttfamily, % 代码字符串的特殊格式  
+	keepspaces=true, %  
+	breakindent=22pt, %  
+	numbers=left,%左侧显示行号 往左靠,还可以为right，或none，即不加行号  
+	stepnumber=1,%若设置为2，则显示行号为1,3,5，即stepnumber为公差,默认stepnumber=1  
+	%numberstyle=\tiny, %行号字体用小号  
+	numberstyle={\color[RGB]{0,192,192}\tiny} ,%设置行号的大小，大小有tiny,scriptsize,footnotesize,small,normalsize,large等  
+	numbersep=8pt,  %设置行号与代码的距离，默认是5pt  
+	basicstyle=\footnotesize, % 这句设置代码的大小  
+	showspaces=false, % 
+	escapechar=`,
+	flexiblecolumns=true, %  
+	breaklines=true, %对过长的代码自动换行  
+	breakautoindent=true,%  
+	breakindent=4em, %  	   
+	aboveskip=1em, %代码块边框  
+	tabsize=4,  
+	showstringspaces=false, %不显示字符串中的空格  
+	backgroundcolor=\color[RGB]{245,245,244},   %代码背景色  
+	%backgroundcolor=\color[rgb]{0.91,0.91,0.91}    %添加背景色  
+	escapeinside={``}{\_},  %在``里显示中文  
+	%% added by http://bbs.ctex.org/viewthread.php?tid=53451  
+	fontadjust,  
+	captionpos=t,  
+	framextopmargin=2pt,framexbottommargin=2pt,abovecaptionskip=-3pt,belowcaptionskip=3pt,  
+	xleftmargin=4em,xrightmargin=4em, % 设定listing左右的空白  
+	texcl=true
 }
 
 %%%% 正文开始 %%%%
@@ -106,7 +146,7 @@ language=C
 		\cline{1-4}
 		1 & 蒋小强 & 2014-10-22 & 创建基础版本\\
 		\hline
-		2 & & &\\
+		2 & 蒋小强 & 2017-08-11 & 增加VLC视频提取音频\\
 		\hline
 		3 & & &\\
 		\hline
@@ -393,7 +433,7 @@ sudo fc-cache -fv。
 
 命令执行完，屏幕出现“fc-cache: succeeded”之后，说明字体已经安装成功了。	
 
-\begin{lstlisting}
+\begin{lstlisting}[language=tex]
 \documentclass{article}
 \usepackage{CJKutf8}
 \begin{document}
@@ -412,6 +452,18 @@ sudo fc-cache -fv。
 \end{CJK}
 \end{document}
 \end{lstlisting}	
+
+\subsection{图形处理工具inkscape}
+
+Inkscape 能够绘制用于网络或者移动电话的图形，可以是简单的线画图、漫画、复杂的艺术作品、图表或者是组织结构图。Inkscape 是一款高端的图形工具，其功能类似于 Illustrator、CorelDraw 和 Xara X。它是一款多平台软件，可以自由地在 Linux、 Microsoft Windows、Solaris 和 Mac OS X 操作系统上运行。安装：
+
+\begin{lstlisting}[language=Bash]
+# Mac OS X下安装
+brew install caskformula/caskformula/inkscape
+brew uninstall inkscape
+brew cleanup
+\end{lstlisting}
+
 
 \subsection{内容管理系统CMS}
 
@@ -445,6 +497,14 @@ Kooboo CMS is an Enterprise Level CMS based on ASP.NET. The features includes:
 \subsubsection{Mambo}
 
 \subsubsection{TYPO3}
+
+
+\subsection{dolphin}
+
+\subsubsection{公开级别}
+
+默认不公开。
+
 
 \clearpage
 	
@@ -575,6 +635,61 @@ Mageia; and a portable app for Windows.
 GNU Wget is a free utility for non-interactive download of files from the Web. 
 It supports HTTP, HTTPS, and FTP protocols, as well as retrieval through HTTP proxies. 
 
+
+\section{transmission}
+
+Transmission全称TransmissionBittorrent，由C开发而成（Mac OS上用的是Objective-C），硬件资源消耗极少，界面极度精简。支持包括Linux、BSD、Solaris、Mac OS X等多种操作系统，以及Networked Media Tank、WD MyBook、ReadyNAS、D-Link DNS-323 \& CH3SNAS、Synology等多种设备。支持GTK+、命令行、Web等多种界面。
+
+\subsection{基本操作}
+
+
+\begin{lstlisting}[language=Bash]
+# 启动transmission-daemon
+sudo service transmission-daemon start
+\end{lstlisting}
+
+有时需要transmission开机自动启动：
+
+\begin{lstlisting}[language=Bash]
+# 打开配置文件
+sudo vim /etc/rc.local
+# 添加启动命令
+service transmission-daemon start
+\end{lstlisting}
+
+
+\subsection{配置}
+
+\paragraph{修改登陆密码}
+
+修改密码步骤如下：
+
+\begin{lstlisting}[language=Bash]
+# 停止transmission-daemon
+sudo service transmission-daemon start
+sudo vim /etc/transmission-daemon/settings.json
+\end{lstlisting}
+
+找到”rpc-password”:后面引号内就是经过加密的密码，直接把引号内的内容修改为你的新密码就可以，程序会自动生成加密串。
+
+
+\section{aria2(GNU General Public License)}
+
+aria2 is a lightweight multi-protocol \& multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.
+
+\subsection{基本使用}
+
+\begin{lstlisting}[language=Bash]
+# Mac下安装aria2
+brew install aria2
+＃　Raspberry Pi下安装
+sudo apt-get install aria2 -y
+# 下载文件示例
+aria2c https://nchc.dl.sourceforge.net/project/projectlibre/ProjectLibre/1.7/projectlibre-1.7.dmg
+\end{lstlisting}
+
+
+
 \chapter{图形处理}	
 
 \subsection{Graphviz}
@@ -649,7 +764,45 @@ Spark is an Open Source, cross-platform IM client optimized for businesses and o
 Jabber 是著名的Linux即时通讯服务服务器，它是一个自由开源软件，能让用户自己架即时通讯服务器，可以在Internet上应用，也可以在局域网中应用。Jabber最有优势的就是其通信协议，可以和多种即时通讯对接。
 
 
-\section{其他工具}
+\chapter{其他工具}
+
+\section{Widgets}
+
+\subsection{rsync}
+
+rsync is an open source utility that provides fast incremental file transfer. rsync is freely available under the GNU General Public License and is currently being maintained by Wayne Davison.在树莓派上面下载好电影后，拷贝到本机(因为树莓派的容量只有32GB)比较慢，速度只有1MB左右，所以可以借助rsync工具来实现增量拷贝，类似于断点续传的效果。将树霉派上的文件拷贝到本机：
+
+\begin{lstlisting}[language=Bash]
+rsync -avz　--progress pi:~/share .
+\end{lstlisting}
+
+-a表示归档模式，--archive归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD。-z, --compress 对备份的文件在传输时进行压缩处理。添加progress参数，会显示同步过程中的进度信息。
+
+\subsection{samba}
+
+samba可共享在树霉派上下载的影片，不需要在拷贝到本机才可以播放了。输入如下命令安装samba:
+
+\begin{lstlisting}[language=Bash]
+sudo　apt-get install samba -y
+\end{lstlisting}
+
+配置samba，在/etc/samba/smb.cnf文件中:
+
+\begin{lstlisting}[language=Bash]
+[tmp]
+   path = /home/pi/share
+   valid users=pi
+   browseable=yes
+   read only = no
+   public = yes
+   writable=yes
+\end{lstlisting}
+
+启动samba:
+
+\begin{lstlisting}[language=Bash]
+sudo samba
+\end{lstlisting}
 
 \subsection{LICEcap}
 
@@ -766,6 +919,38 @@ and WebHTTrack the Linux/Unix/BSD。
 
 \section{多媒体}
 
+\subsection{ffmpeg}
+
+FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。
+
+使用ffmpeg是由于比较喜欢Kygo的一首混音作品Anything for you，但是只有Youtube上面能够搜索到视频版本，所以想下载下来将音频分离出来。下载Youtube视频到网址\url{http://www.clipconverter.cc/}。获取ffmpeg源代码:
+
+\begin{lstlisting}[language=Bash]
+git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+\end{lstlisting}
+
+安装yasm:
+
+\begin{lstlisting}[language=Bash]
+sudo apt-get install yasm -y
+\end{lstlisting}
+
+安装ffmpeg:
+
+\begin{lstlisting}[language=Bash]
+./configure --enable-shared --prefix=/usr/local/ffmpeg
+sudo make
+sudo make install
+\end{lstlisting}
+
+分离音频:
+
+\begin{lstlisting}[language=Bash]
+ffmpeg -i input_file -acodec copy -vn output_file_audio　　//分离音频流
+\end{lstlisting}
+
+
+
 \subsection{VLC Media Player}	
 
 \subsubsection{简介}
@@ -781,6 +966,31 @@ VLC多媒体播放器具有跨平台的特性，它有Linux、Microsoft Windows�
 从1.0.5版本开始VLC的ActiveX的扩充包已经放弃js接口的调用。
 VLC还有一个非常好的功能——支持播放某些没有下载完成的视频文件部份内容。
 
+\subsubsection{提取音频}
+
+VLC可以提取视频中的音频，在Youtube上下载了Kygo混音的一首作品(国内没有找到，所以才这么费劲)，将音频提取出来。在VLC的Media->Convert/Save下，如图\ref{fig:convertaudio}所示。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.5]{convertaudio.png}
+	\caption{VLC提取音频}
+	\label{fig:convertaudio}
+\end{figure}
+
+\subsection{MPlayer}
+
+MPlayer是一款开源多媒体播放器，以GNU通用公共许可证发布。此款软件可在各主流操作系统使用，例如Linux和其他类Unix系统、Windows及Mac OS X系统。
+
+\begin{lstlisting}[language=Bash]
+#　Raspberry Pi安装
+sudo apt-get install mplayer -y
+# Raspberry Pi音量调节安装
+sudo apt-get install alsa-utils -y
+#　打开音量调节器
+alsamixer
+\end{lstlisting}
+
+
 \subsection{Qmmp}
 
 \subsubsection{简介}
@@ -794,6 +1004,16 @@ qmmp is a free and open-source audio player written in C++ with the help of the 
 信奉信息自由，交流创造价值。作者很长一段时间以来，对手头的播放器颇为不满意：领先的播放器技术都是国外的，而国内的所谓播放器，不仅被插件插的一塌糊涂，还将海外的开源播放器拿回来打个包，就挂上自己的名字开始糟蹋别人的GPL。
 
 所以在2008年末，这个华人播放器开源项目在沈晟的带领下启动了，旨在为华人的使用习惯，来尽量做得最好，而且尊重和遵守开源协议。
+
+\subsection{minidlna}
+
+在树莓派上安装完毕minidlna后，启动minidlna：
+
+\begin{lstlisting}[language=Bash]
+/usr/bin/minidlnad
+\end{lstlisting}
+
+推荐用此方法启动minidlna，如果启动失败，会在终端中提示失败原因。
 
 \section{游戏}		
 \subsection{SuperTuxKart}
